@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito - Tienda de Paula</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="productList.js"></script>
+    <script src="carrito.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+    <header class="encabezado">
+        <img src="imagenesPrincipal/principal.jpg" alt="Logo" class="logo">
+        <h1>Creaciones Samuel</h1>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <ul>
+    </ul>
+    <div class="vaciar-carrito">
+        <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    </div>
+
+
+
+    <script>
+        let carrito = obtenerCarrito();
+        for (let product in carrito) {
+            $("ul").append("<li><a href='producto.html?id=" + product + "'>" + products[product].nombre + "</a> <span>cantidad: " + carrito[product] + "</span></li>");
+            console.log("product: " + product);
+        }
+
+        function vaciar() {
+            vaciarCarrito();
+            $("ul").html("");
+        }
+
+    </script>
+
+
+    <footer id="contacto">
+        <div class="contacto-container">
+            <h2>¡Contáctanos!</h2>
+
+            <div class="contacto-info">
+                <div class="contacto-item">
+                    <h3>📧 Correo Electrónico:</h3>
+                    <p><a href="mailto:aaguirrepaula@gmail.com">aaguirrepaula@gmail.com</a></p>
+                </div>
+
+                <div class="contacto-item">
+                    <h3>📳 Teléfono:</h3>
+                    <p><a href="tel:3124918694">3124918694</a></p>
+                </div>
+
+                <div class="contacto-item">
+                    <h3>📍 Ubicación:</h3>
+                    <p>
+                        <a href="https://www.google.com/maps/place/C%C3%B3mbita,+Boyac%C3%A1/@5.6342019,-73.3284129,16z/data=!3m1!4b1!4m6!3m5!1s0x8e6a7a602413f5f9:0x26fb0124c89bb878!8m2!3d5.634202!4d-73.323263!16s%2Fm%2F02qlsth?entry=ttu"
+                            target="_blank">
+                            Cómbita, Boyacá, Colombia
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contacto-item">
+                    <h3>Instagram:</h3>
+                    <a href="https://www.instagram.com/creacion_samuel?igsh=MTRhYnhqOHZkb3Z6cw==" target="_blank">
+                        <img src="imagenesPrincipal/instagram.jpeg" alt="Instagram" class="instagram-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

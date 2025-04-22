@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Producto</title>
+        <link rel="stylesheet" href="estilos.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="productList.js"></script>
+        <script src="carrito.js"></script>
+
+    </head>
+
+    <body>
+
+        <header class="encabezado">
+            <img src="imagenesPrincipal/principal.jpg" alt="Logo" class="logo">
+            <h1>Creaciones Samuel</h1>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="carrito.html">Carrito</a>
+                
+            </nav>
+        </header>
+        <section class="producto-detalle">
+            <div class="galeria-imagenes">
+              <img id="imagen-producto" src="" alt="">
+              <img id="imagen-extra" src="" alt="" class="imagen-extra" style="display: none;">
+            </div>
+            
+
+            <div class="info-producto">
+              <h2 id="nombre-producto"></h2>
+              <p id="precio"></p>
+              <p id="descripcion-producto"></p>
+              <label for="cant">Cantidad:</label>
+              <input type="number" id="cant" value="1" min="1">
+              <button onclick="agregar()">Agregar al Carrito</button>
+            </div>
+          </section>
+          
+        
+        
+
+
+
+        
+
+        <script>
+            $(document).ready(function () {
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const id = urlParams.get('id');
+        
+                if (products[id]) {
+                    const producto = products[id];
+        
+                    $("title").html(producto.nombre + " - Creaciones Samuel");
+                    $("#imagen-producto").attr("src", producto.imagen).attr("alt", producto.nombre);
+        
+                    //  Mostrar imagen secundaria
+                    if (producto.imagenExtra) {
+                        $("#imagen-extra").attr("src", producto.imagenExtra).attr("alt", "Vista adicional");
+                        $("#imagen-extra").show();
+                    }
+                    $("#descripcion-producto").text(producto.descripcion);
+                    $("#nombre-producto").text(producto.nombre);
+                    $("#precio").text("Precio: $" + producto.precio.toLocaleString('es-CO'));
+                } else {
+                    $("section").html("<p>Producto no encontrado.</p>");
+                }
+        
+                window.agregar = function () {
+                    const cantidad = parseInt($("#cant").val());
+                    if (!products[id]) {
+                        alert("Producto no encontrado.");
+                        return;
+                    }
+                    if (cantidad < 1) {
+                        alert("La cantidad debe ser al menos 1.");
+                        return;
+                    }
+                    agregarAlCarrito(id, cantidad);
+                    alert("Producto agregado al carrito ✅");
+                };
+            });
+        </script>
+        

@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    color: unset;
+    text-decoration: unset;
+}
+
+
+
+
+
+.descripcion {
+    text-align: center;
+}
+
+
+
+a:hover {
+    color: #5c00b3;
+    text-decoration: unset;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*imagenextra*/
+.galeria-imagenes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.galeria-imagenes img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+/*precio*paina-2*/
+#precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #925187;
+    margin-bottom: 1rem;
+}
+/*boton carrito*/
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+
+.btn-volver {
+  display: inline-block;
+  margin: 20px;
+  color: #d61fd6;
+  font-weight: bold;
+}
+.btn-volver:hover {
+  text-decoration: underline;
+}
+
+
+
+
+button:hover {
+    background-color: #5c00b3;
+}
+
+
+
+.encabezado {
+    background-color: #fff0f6;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #d61fd6;
+}
+
+.logo {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.menu a {
+    margin: 0 10px;
+    color: #925187;
+    font-weight: 600;
+    text-decoration: none;  
+}
+
+.vaciar-carrito {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.producto-detalle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;  
+  padding: 20px;
+  align-items: center;
+}
+
+.producto-detalle img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info-producto {
+  max-width: 400px;
+}
+
+.info-producto h2 {
+  margin-top: 0;
+}
+
+button {
+  background-color: #16e0d6;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+button:hover {
+  background-color: #0ddae9;
+}
+  
+/*producto */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 30px;
+    margin: 0;
+}
+
+li {    
+    background-color: #fff7f1;
+    border: 2px solid #faa7e5;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.03);
+}
+
+li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+li h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #5e0a69;
+}
+
+
+
+
+
+
+
+/* Estilos generales para el contacto*/
+footer#contacto {
+    background-color: #f7f7f7;
+    padding: 30px 10px; 
+    text-align: center;
+  }
+  
+  .contacto-container {
+    max-width: 1000px; 
+    margin: 0 auto;
+  }
+  
+  .contacto-container h2 {
+    font-size: 1.6rem; 
+    color: #eeaede;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor de los elementos de contacto */
+  .contacto-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajustamos el tamaño de las columnas */
+    gap: 15px;
+    justify-items: center;
+  }
+  
+  .contacto-item {
+    background-color: #fff;
+    padding: 05px; /* Reducimos el padding interno */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+   
+    font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+  }
+  
+  .contacto-item h3 {
+    color: #f3a1e5;
+    font-size: 1.1rem; 
+    margin-bottom: 8px; /* Menos espacio debajo del título */
+  }
+  
+  .contacto-item p {
+    color: #faa4e0;
+    font-size: 0.9rem; /* Reducimos el tamaño del texto */
+  }
+  
+  .contacto-item a {
+    color: #f58dc1;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contacto-item a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilos para la imagen de Instagram */
+.instagram-img {
+    width: 10%;
+    max-width: 150px; 
+    height: auto; 
+    margin-top: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .instagram-img:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  /* Estilos para cuando se visualiza en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .contacto-container h2 {
+      font-size: 1.4rem;
+    }
+    
+    .contacto-item {
+      width: 90%; 
+      padding: 12px; 
+    }
+  
+    .instagram-img {
+      max-width: 130px;   
+    }
+  }
+
+    
